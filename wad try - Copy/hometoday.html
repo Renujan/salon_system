@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Barber Shop Salon</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: cursive;
+            color: white;
+            background-image: url('saloon2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-box {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-box:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            margin:150px;
+        }
+
+        header {
+            text-align: center;
+            font-size: 36px;
+            padding: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+      
+
+        .blur-background {
+            background-image: url('saloon2.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+          
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+          
+        }
+
+            .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px; 
+            position: relative;
+            z-index: 1;
+            background-color:rgb(255, 175, 71);
+        }
+
+        .left {
+            width: 50%;
+            padding: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .right {
+            width: 25%;
+            position: relative;
+            z-index: 1;
+            margin-top: 20px; 
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .header-container {
+            margin: 150px; 
+            height: 10px;
+        }
+
+        .nav-logo {
+    margin-right: 5px; 
+}
+
+
+nav {
+      background-color: #333;
+      color: rgb(255, 250, 241);
+      padding: 10px 20px;
+    }
+	.nav-logo {
+            margin-right: 5px; 
+        }
+
+        .nav-logo img {
+            width: 200px; 
+            height: auto;
+        }
+	nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-box:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+		nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 20px;
+            border: 2px solid transparent; 
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-box:hover {
+            border-color: #ffa703; 
+        }
+        footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 150px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height:30px;
+}
+
+.footer-box {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-box:last-child {
+    margin-right: 0;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+    color: #ffae00;
+}
+
+.footer-box p {
+    margin: 5px 0;
+}
+
+.footer-box ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 5px;
+}
+
+.footer-box ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #ffa600;
+}
+.box {
+            width: 300px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box img {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .box p {
+            margin-bottom: 20px;
+            color: #000000;
+            font-size: 16px;
+        }
+
+        .box span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+		.container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-container">
+        <nav>
+            <div class="nav-logo">
+                <img src="logo2.jpg" >
+            </div>
+            <div class="nav-content">
+                <div class="nav-box"><a href="hometoday.html">Home</a></div>
+                <div class="nav-box"><a href="type.html">Hair Styles</a></div>
+                <div class="nav-box"><a href="logi1.html">Login</a></div>
+                <div class="nav-box"><a href="registernav.html">Registration</a></div>
+                <div class="nav-box"><a href="contact.html">Contact Us</a></div>
+                <div class="nav-box"><a href="terms.html">Terms & Conditions</a></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="header-container">
+        <header>Style Look</header>
+    </div>
+
+    <div class="content-container">
+        <div class="blur-background"></div>
+        <div class="container">
+            <div class="left">
+                <p>Welcome to Your Barber Shop Salon! We offer high-quality haircuts, grooming services, and a wide range of grooming products to keep you looking your best. We pride ourselves on providing top-notch grooming services tailored to your needs. From classic haircuts and beard trims to modern styles and hot towel shaves, our skilled barbers are dedicated to helping you look and feel your best. Whether you're preparing for a special occasion or simply want to maintain your signature look, trust us to deliver precision cuts and personalized service with every visit</p>
+            </div>
+            <div class="right">
+                <img src="homepage.jpg" alt="Barber Shop Photo">
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header>Our stylish</header>
+    </div>
+	<div class="container1">
+	<div class="box">
+        <img src="barber1.jfif" alt="Short Hairstyle 1">
+        <h2>Sakthivel Janakan</h2>
+        <p>Cutting-edge visionary blending creativity and precision for bold, trendsetting looks.</p>
+      
+    </div>
+
+    <div class="box">
+        <img src="barber2.jfif" alt="Short Hairstyle 2">
+        <h2>jems Anojan</h2>
+        <p>Master of timeless elegance, specializing in refined, traditional cuts for gentlemen</p>
+       
+    </div>
+    
+    <div class="box">
+        <img src="barber3.jfif" alt="Short Hairstyle 3">
+        <h2>Roshan renujan</h2>
+        <p>Intuitive stylist with a gentle touch, known for personalized care and bringing out the best in every strand.</p>
+    
+    </div>
+	</div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>Email: stylelook@gmail.com</p>
+                <p>Phone: +(94) 732461821</p>
+                <p>Address: 43/1 jaffna town</p>
+            </div>
+            
+            <div class="footer-box">
+                <p>© 2024 Style Look Salon. All rights reserved.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    
+</body>
+</html>

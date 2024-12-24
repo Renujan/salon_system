@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon System Login</title>
+  <style>
+    body {
+      background-image: url('tbg.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+    .blur-background {
+      background-image: url('your-background-image.jpg'); 
+      background-size: cover;
+      filter: blur(8px); 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    nav {
+      background-color: #333;
+      color: rgb(255, 250, 241);
+      padding: 10px 20px;
+    }
+    .menu {
+      display: flex;
+      font-size: 25px;
+    }
+    .menu li {
+      margin-right: 10px;
+    }
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s ease;
+      padding: 25px;
+    }
+    .menu li a:hover {
+      color: #4CAF50;
+    }
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 20px; 
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #ff4500;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e34234;
+    }
+    .nav-logo {
+    margin-right: 5px; 
+}
+
+
+}nav {
+      background-color: #333;
+      color: rgb(255, 250, 241);
+      padding: 10px 20px;
+    }
+	.nav-logo {
+            margin-right: 5px;
+        }
+
+        .nav-logo img {
+            width: 200px; 
+            height: auto;
+        }
+	nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-box:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+		nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-box {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 20px;
+            border: 2px solid transparent; 
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-box:hover {
+            border-color: #ffa703; 
+        }
+  .login-container{
+     margin-top:150px;	 
+  }
+  footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 150px; 
+  
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height:10px;
+    bottom:0 ;
+}
+
+.footer-box {
+    flex: 1;
+    margin-right: 20px;
+    bottom:0 ;
+}
+
+.footer-box:last-child {
+    margin-right: 0;
+}
+
+.footer-box h3 {
+    margin-bottom: 1px;
+    color: #ffae00;
+}
+
+.footer-box p {
+    margin: 5px 0;
+}
+
+.footer-box ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 1px;
+}
+
+.footer-box ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #ffa600;
+}
+  </style>
+</head>
+<body>
+
+<div class="blur-background"></div>
+
+<nav>
+            <div class="nav-logo">
+                <img src="logo2.jpg" >
+            </div>
+            <div class="nav-content">
+                <div class="nav-box"><a href="hometoday.html">Home</a></div>
+                <div class="nav-box"><a href="type.html">Hair Styles</a></div>
+                <div class="nav-box"><a href="logi1.html">Login</a></div>
+                <div class="nav-box"><a href="registernav.html">Registration</a></div>
+                <div class="nav-box"><a href="contact.html">Contact Us</a></div>
+                <div class="nav-box"><a href="terms.html">Terms & Conditions</a></div>
+            </div>
+        </nav>
+
+<div class="login-container">
+  <h1>Stylish Hair</h1>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+</div>
+<br>
+
+<script>
+  document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+   
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+   
+    if (username === "admin" && password === "password") {
+      alert("Login successful! Redirecting to dashboard...");
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Invalid username or password. Please try again.");
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+      document.getElementById("username").focus();
+    }
+  });
+</script>
+<footer>
+
+  <div class="footer-content">
+      <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>Email: stylelook@gmail.com</p>
+          <p>Phone: +(94) 732461821</p>
+          <p>Address: 43/1 jaffna town</p>
+      </div>
+      
+      <div class="footer-box">
+          <p>© 2024 Style Look Salon. All rights reserved.</p>
+      </div>
+      <div class="footer-box">
+          <h3>Follow Us</h3>
+          <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+</body>
+</html>
