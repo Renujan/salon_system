@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(0deg, #ffd5ae, rgb(219, 255, 243));
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .hairstyle-details {
+            text-align: center;
+        }
+
+        .hairstyle-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .appointment-form {
+            margin-top: 20px;
+        }
+
+        .appointment-form input, .appointment-form select, .appointment-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .appointment-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .appointment-form button:hover {
+            background-color: #45a049;
+        }
+
+        .back-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Appointment</h1>
+        <div class="hairstyle-details">
+            <img id="hairstyle-img" src="" alt="Selected Hairstyle">
+            <h2 id="hairstyle-name"></h2>
+            <p id="hairstyle-price"></p>
+        </div>
+        <form class="appointment-form" action="save_appointment.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="date" name="appointment_date" placeholder="Appointment Date" required>
+            <select name="appointment_time" required>
+                <option value="">Select Time</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+            </select>
+            <input type="hidden" name="hairstyle_name" id="hairstyle-name-input">
+            <input type="hidden" name="hairstyle_price" id="hairstyle-price-input">
+            <button type="submit">Book Appointment</button>
+        </form>
+        
+        <a href="javascript:history.back()" class="back-button">Back</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var hairstyle = JSON.parse(localStorage.getItem('hairstyle'));
+            
+            if (hairstyle) {
+                document.getElementById('hairstyle-img').src = hairstyle.img;
+                document.getElementById('hairstyle-name').textContent = hairstyle.name;
+                document.getElementById('hairstyle-price').textContent = hairstyle.price;
+    
+                
+                document.getElementById('hairstyle-name-input').value = hairstyle.name;
+                document.getElementById('hairstyle-price-input').value = hairstyle.price;
+            } else {
+                alert('No hairstyle selected!');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+    
+</body>
+</html>
